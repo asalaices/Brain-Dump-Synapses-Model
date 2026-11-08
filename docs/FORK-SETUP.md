@@ -34,6 +34,11 @@ python3 scripts/check_model.py
 python3 -m unittest discover -s tests
 ```
 
+`python3 scripts/audit_plan.py` prints a read-only JSON audit/plan report built
+on the same checks (findings, next steps, declared out-of-scope items) and exits
+1 on blockers. It inspects the working tree only: it does not audit Git history,
+publish, grant access or write anything.
+
 The checks fail on a non-default-deny or non-empty grant template, preset
 instance identity, UUID-shaped identifiers, host-specific paths, credential-like
 values, numeric repository bindings, operational directories (`records`,
