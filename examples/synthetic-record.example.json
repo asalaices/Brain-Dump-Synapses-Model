@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "illustration_only": "Invented from scratch. Not a framework record format, not operational data, and never to be placed in a ledger.",
+  "entry_id": "EXAMPLE-ENTRY-0001",
+  "title": "Example checkpoint for a fictional project",
+  "summary": "A fictional developer documented a decision about a made-up widget.",
+  "observations": ["The made-up widget works in a pretend test."],
+  "next_steps": ["Imagine a follow-up."]
+}

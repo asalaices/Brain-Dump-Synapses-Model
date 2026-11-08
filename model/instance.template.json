@@ -1,0 +1,8 @@
+{
+  "template_version": 1,
+  "status": "uninitialized",
+  "instance_id": null,
+  "source_alias": null,
+  "repository": null,
+  "note": "Synthetic template. Framework setup must generate a fresh instance identity and bind your own authenticated private repository. Nothing here identifies an existing installation."
+}

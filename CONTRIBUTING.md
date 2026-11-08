@@ -1,6 +1,6 @@
 # Contributing
 
-This is a public, instruction-only starter. Keep contributions within the
+This is a public starter: instructions plus an uninitialized synthetic base. Keep contributions within the
 agreed scope; runtime implementation, instance provisioning and deployment need
 separate proposals and review.
 
@@ -22,9 +22,11 @@ Do not force-push or bypass repository protections.
   completed publication, service readiness or production acceptance without
   evidence.
 
-There is no build, test suite or installation command in this starter yet.
-Documentation changes require link and content review. Any future executable
-contribution must include validation appropriate to its actual behavior.
+Validate with `python3 scripts/check_model.py` and
+`python3 -m unittest discover -s tests`; they enforce default-deny templates and
+reject identities, host paths, credentials and operational directories. There is
+no build or installation command. Documentation changes still require content
+review, and any executable contribution needs validation for its behavior.
 
 Keep private review evidence and Brain checkpoints at an explicitly authorized
 private destination, never in this public repository. If a project's policy
