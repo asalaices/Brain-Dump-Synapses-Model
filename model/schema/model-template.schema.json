@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Synapses-Model template placeholder (not the framework schema)",
+  "description": "Minimal placeholder constraining the uninitialized templates in this starter. The Brain-Dump framework owns the real record and grant schemas.",
+  "$defs": {
+    "instance": {
+      "type": "object",
+      "required": ["template_version", "status", "instance_id", "source_alias", "repository"],
+      "properties": {
+        "template_version": { "const": 1 },
+        "status": { "const": "uninitialized" },
+        "instance_id": { "type": "null" },
+        "source_alias": { "type": "null" },
+        "repository": { "type": "null" },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "grants": {
+      "type": "object",
+      "required": ["template_version", "default", "readers", "writers"],
+      "properties": {
+        "template_version": { "const": 1 },
+        "default": { "const": "deny" },
+        "readers": { "type": "array", "maxItems": 0 },
+        "writers": { "type": "array", "maxItems": 0 },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

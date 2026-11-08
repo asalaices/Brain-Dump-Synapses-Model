@@ -6,7 +6,8 @@ Personal standing approvals and machine setup are not repository requirements.
 
 ## Public starter boundary
 
-This repository is public and instruction-only. Use synthetic-only content,
+This repository is public and has no runtime (instructions plus a synthetic
+default-deny base). Use synthetic-only content,
 separate private instance identities, and independent default-deny reader/writer
 authorization as described in README. Never import private records, credentials,
 host paths, grants or configuration. Do not add a private infrastructure

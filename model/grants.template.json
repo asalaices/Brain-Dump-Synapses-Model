@@ -1,0 +1,7 @@
+{
+  "template_version": 1,
+  "default": "deny",
+  "readers": [],
+  "writers": [],
+  "note": "Readers and writers are independent and empty by default. Add entries only in your private instance through the framework's reviewed grant workflow."
+}

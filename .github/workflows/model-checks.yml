@@ -1,0 +1,14 @@
+name: model-checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check_model.py
+      - run: python3 -m unittest discover -s tests

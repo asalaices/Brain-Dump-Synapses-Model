@@ -1,9 +1,12 @@
 # Brain-Dump-Synapses-Model
 
 Public starter for developers preparing their own Brain Dump instance. This
-repository currently contains contributor and agent instructions only: no
-runtime, instance configuration, records, schemas or runnable model are supplied.
-Downloading it does not create a private Brain or authorize access to one.
+repository contains contributor and agent instructions plus an uninitialized,
+default-deny synthetic base (templates with null identities and empty
+reader/writer lists, a placeholder schema and one invented example). No runtime,
+instance configuration, records or framework schemas are supplied. Downloading
+it does not create a private Brain or authorize access to one. See
+[docs/FORK-SETUP.md](docs/FORK-SETUP.md).
 
 ## Public and private boundaries
 
@@ -40,6 +43,8 @@ Copilot loads [.github/copilot-instructions.md](.github/copilot-instructions.md)
 Claude starts at [CLAUDE.md](CLAUDE.md). All point to the same repository policy,
 without requiring a particular developer's home-directory instructions.
 
-Runtime features, configuration scaffolds and production acceptance are deferred.
+Run `python3 scripts/check_model.py` and `python3 -m unittest discover -s tests`
+to validate the synthetic/default-deny boundary. Runtime features, instance
+provisioning and production acceptance are deferred.
 No license grant for this starter is declared here; consult upstream license and
 notice files separately before reusing framework code.
