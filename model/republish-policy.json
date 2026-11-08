@@ -1,0 +1,15 @@
+{
+  "policy_version": 1,
+  "format": "synapses-model-export/v1",
+  "source_repo": "asalaices/Brain-Dump-Synapses",
+  "dest_root": "upstream",
+  "max_files": 64,
+  "max_file_bytes": 262144,
+  "approved_allowlists": [
+    {
+      "version": "v1",
+      "sha256": "8c72bec5eea822af7d3e2c1514d9bf375e19945b4109b2ff04f8cda91185344b",
+      "status": "provisional until the producer change is merged to its main branch"
+    }
+  ]
+}
