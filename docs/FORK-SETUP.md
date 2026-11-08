@@ -44,3 +44,17 @@ instance identity, UUID-shaped identifiers, host-specific paths, credential-like
 values, numeric repository bindings, operational directories (`records`,
 `ledger`, `grants`, `receipts`, `cache`, `logs`) and broken relative links. They
 do not prove a private instance is safe; review your own setup separately.
+
+## Republishing from the Synapses-owned export
+
+This repository is the sanitized developer-bootstrap projection of the private
+Synapses source. `python3 scripts/republish_model.py verify|plan|apply
+--artifact DIR` consumes only a producer-built `synapses-model-export/v1`
+artifact (`manifest.json`, external `manifest.sha256`, `files/`); it never reads
+the private repository. `apply` writes nothing unless `--execute` is given, is
+all-or-nothing, and republishing the same artifact is a no-op. Payload lands
+under `upstream/` and `model/PROVENANCE.json` records the source commit and
+hashes. The consumer-owned `model/republish-policy.json` decides which
+allowlist version/digest pairs are accepted. Provenance fields are producer
+assertions, not independently verified. Nothing is deleted: files absent from a
+newer artifact make `apply` refuse.
