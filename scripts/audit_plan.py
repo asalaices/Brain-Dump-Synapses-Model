@@ -10,6 +10,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.dont_write_bytecode = True  # keep the audit read-only
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import check_model  # noqa: E402
 
